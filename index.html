@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국민취업지원제도 프로세스 가이드</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', 'Inter', sans-serif;
+        }
+
+        /* 활성 목차 링크 스타일 */
+        .sidebar-link.active {
+            background-color: #e0f2fe; /* light-blue-100 */
+            color: #0c4a6e; /* light-blue-900 */
+            font-weight: 600;
+        }
+        
+        /* 스크롤바 스타일 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #9ca3af; /* gray-400 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #6b7280; /* gray-500 */
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #f3f4f6; /* gray-100 */
+        }
+
+        /* 본문 콘텐츠 스타일 */
+        .content-section {
+            /* 앵커 링크 클릭 시 헤더에 가려지지 않도록 scroll-margin-top 설정 */
+            /* 헤더 h-20 (5rem) + 여유공간 1rem */
+            scroll-margin-top: 6rem; 
+        }
+        
+        /* 예시 텍스트 박스 */
+        .example-box {
+            background-color: #f9fafb; /* gray-50 */
+            border-left: 4px solid #3b82f6; /* blue-500 */
+            padding: 1rem 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0 8px 8px 0;
+            white-space: pre-wrap; /* 줄바꿈 유지 */
+            font-family: 'Noto Sans KR', monospace;
+            line-height: 1.7;
+            font-size: 0.95rem; /* 가독성 향상 */
+        }
+
+        /* 검색 하이라이트 스타일 */
+        .search-highlight {
+            background-color: #fef08a; /* yellow-300 */
+            border-radius: 3px;
+            padding: 0 2px;
+            font-weight: 600;
+            color: #713f12; /* amber-900 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- 전체 래퍼 -->
+    <div class="flex h-screen">
+        
+        <!-- 사이드바 (목차) -->
+        <nav class="fixed top-0 left-0 w-72 h-full bg-white shadow-lg overflow-y-auto pb-8 z-20">
+            <div class="p-5 border-b">
+                <h1 class="text-lg font-bold text-gray-800">프로세스 가이드</h1>
+                <p class="text-sm text-gray-500">국민취업지원제도</p>
+            </div>
+            <ul class="mt-4 space-y-1 px-3" id="sidebar-nav">
+                <li><a href="#intro" class="sidebar-link block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">읽기 전 주의사항</a></li>
+                
+                <li>
+                    <span class="block px-4 pt-4 pb-1 text-xs font-semibold text-gray-400 uppercase">1. 참여자 배정</span>
+                    <ul class="space-y-1">
+                        <li><a href="#chap1" class="sidebar-link block pl-6 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">1. 참여자 배정</a></li>
+                        <li><a href="#chap1-1" class="sidebar-link block pl-8 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">1-1. 참여자 관리 사이트 수정</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <span class="block px-4 pt-4 pb-1 text-xs font-semibold text-gray-400 uppercase">2. 초기상담</span>
+                    <ul class="space-y-1">
+                        <li><a href="#chap2" class="sidebar-link block pl-6 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">2. 초기상담</a></li>
+                        <li><a href="#chap2-0" class="sidebar-link block pl-8 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">2-0. 구직신청서&인정통지서 출력</a></li>
+                        <li><a href="#chap2-1" class="sidebar-link block pl-8 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">2-1. 1유형 초기상담일지(예시)</a></li>
+                        <li><a href="#chap2-2" class="sidebar-link block pl-8 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">2-2. 2유형 초기상담일지(예시)</a></li>
+                        <li><a href="#chap2-3" class="sidebar-link block pl-8 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">2-3. 참여자 관리 사이트 수정</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <span class="block px-4 pt-4 pb-1 text-xs font-semibold text-gray-400 uppercase">3. 직업심리검사 해석</span>
+                    <ul class="space-y-1">
+                        <li><a href="#chap3" class="sidebar-link block pl-6 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">3. 직업심리검사 해석</a></li>
+                        <li><a href="#chap3-1" class="sidebar-link block pl-8 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">3-1. 상담일지 입력(예시)</a></li>
+                        <li><a href="#chap3-2" class="sidebar-link block pl-8 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">3-2. 참여자 관리 사이트 수정</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <span class="block px-4 pt-4 pb-1 text-xs font-semibold text-gray-400 uppercase">4. IAP 수립</span>
+                    <ul class="space-y-1">
+                        <li><a href="#chap4" class="sidebar-link block pl-6 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">4. IAP 수립(3번째 방문)</a></li>
+                        <li><a href="#chap4-1" class="sidebar-link block pl-8 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">4-1. 1유형 IAP 수립</a></li>
+                        <li><a href="#chap4-1-1" class="sidebar-link block pl-10 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">4-1-1. 구직촉진수당 지급조건</a></li>
+                        <li><a href="#chap4-1-2" class="sidebar-link block pl-10 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">4-1-2. 훈련참여 여부 설정 예시</a></li>
+                        <li><a href="#chap4-1-3" class="sidebar-link block pl-10 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">4-1-3. 취업활동계획서 출력</a></li>
+                        <li><a href="#chap4-1-4" class="sidebar-link block pl-10 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">4-1-4. 1회차 구직촉진수당 신청</a></li>
+                        <li><a href="#chap4-1-5" class="sidebar-link block pl-10 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">4-1-5. 1유형 상담일지(예시)</a></li>
+                        <li><a href="#chap4-2" class="sidebar-link block pl-8 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">4-2. 2유형 IAP 수립</a></li>
+                        <li><a href="#chap4-2-1" class="sidebar-link block pl-10 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">4-2-1. 2유형 참여수당 신청</a></li>
+                        <li><a href="#chap4-2-2" class="sidebar-link block pl-10 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">4-2-2. 2유형 상담일지(훈련참여)</a></li>
+                        <li><a href="#chap4-2-3" class="sidebar-link block pl-10 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">4-2-3. 2유형 상담일지(훈련미참여)</a></li>
+                        <li><a href="#chap4-3" class="sidebar-link block pl-8 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">4-3. 참여자 관리 사이트 수정</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <span class="block px-4 pt-4 pb-1 text-xs font-semibold text-gray-400 uppercase">5. 알선</span>
+                    <ul class="space-y-1">
+                        <li><a href="#chap5" class="sidebar-link block pl-6 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">5. 알선</a></li>
+                        <li><a href="#chap5-1" class="sidebar-link block pl-8 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">5-1. 고용24 알선</a></li>
+                        <li><a href="#chap5-2" class="sidebar-link block pl-8 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">5-2. 외부구인정보소개</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <span class="block px-4 pt-4 pb-1 text-xs font-semibold text-gray-400 uppercase">6. 각종 예시</span>
+                    <ul class="space-y-1">
+                        <li><a href="#chap6" class="sidebar-link block pl-6 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">6. 각종 예시</a></li>
+                        <li><a href="#chap6-1" class="sidebar-link block pl-8 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">6-1. 최초 유선통화 상담일지</a></li>
+                        <li><a href="#chap6-2" class="sidebar-link block pl-8 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">6-2. 훈련참여지원수당 상담일지</a></li>
+                        <li><a href="#chap6-3" class="sidebar-link block pl-8 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">6-3. 구직촉진수당 지정일 상담일지</a></li>
+                        <li><a href="#chap6-4" class="sidebar-link block pl-8 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">6-4. 1유형 카톡 안내 예시</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- 메인 콘텐츠 -->
+        <main id="main-content" class="ml-72 flex-1 h-screen overflow-y-auto">
+            
+            <!-- 고정 헤더 -->
+            <!-- 'justify-between'을 추가하여 h1과 새 'div'를 양쪽으로 분리 -->
+            <header class="fixed top-0 left-72 right-0 bg-white/80 backdrop-blur-sm shadow-sm h-20 flex items-center justify-between px-8 z-10">
+                <!-- 기존 h1 (왼쪽) -->
+                <h1 class="text-2xl font-bold text-gray-900">국민취업지원제도 신입상담사를 위한 프로세스 가이드</h1>
+
+                <!-- 오른쪽 영역 (검색 및 링크) -->
+                <div class="flex items-center space-x-6">
+                    
+                    <!-- 검색창 -->
+                    <div class="relative">
+                        <!-- 검색 아이콘 -->
+                        <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+                        <input 
+                            type="text" 
+                            id="search-input" 
+                            placeholder="매뉴얼 검색..." 
+                            class="w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                        >
+                    </div>
+
+                    <!-- 외부 링크 -->
+                    <a href="https://www.work24.go.kr/cm/main.do#none" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors">
+                        고용24
+                    </a>
+                    <a href="http://jobmoaa.mycafe24.com/login.do" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors">
+                        참여자관리사이트
+                    </a>
+                </div>
+            </header>
+            
+            <!-- 콘텐츠 영역 -->
+            <!-- mt-20 (5rem)을 추가하여 고정 헤더(h-20)가 내용을 가리지 않도록 함 -->
+            <div id="content-wrapper" class="p-8 lg:p-12 text-gray-800 mt-20">
+
+                <!-- 0. 읽기 전 주의사항 -->
+                <section id="intro" class="content-section max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
+                    <h2 class="text-3xl font-bold mb-6 pb-3 border-b border-gray-200">0. 읽기 전 주의사항</h2>
+                    <p class="text-base leading-relaxed mb-4">
+                        해당 국민취업지원제도 상담진행 프로세스 설명은 신입 상담사분들의 초기 원활한 업무 적응을 위한 목적으로 제작되었으며, 일부 내용은 지역별, 지점별로 상이할 수 있음을 알립니다. (작성 기준 : 2025년도 국민취업지원제도 성남지점)
+                    </p>
+                    <p class="text-base leading-relaxed font-semibold text-red-600 bg-red-50 p-4 rounded-md">
+                        해당 내용을 참고하시되 상담 관련하여 선임 및 지점관리자로부터 확인과 교육을 꼭! 받으시기 바랍니다.
+                    </p>
+                </section>
+
+                <!-- 1. 참여자 배정 -->
+                <section id="chap1" class="content-section max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md mt-8">
+                    <h2 class="text-3xl font-bold mb-6 pb-3 border-b border-gray-200">1. 참여자 배정</h2>
+                    <p class="text-base leading-relaxed mb-4">
+                        참여자 배정시 참여자의 배정일에 맞춰 인정통지일 수정(배정일=인정통지일 일치화)
+                    </p>
+                    <img src="image/image01.png" alt="인정통지일 수정 (image01.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <p class="text-base leading-relaxed my-4">
+                        [배정일]에 맞춰 [인정통지를 받는날]을 변경 후 [변경]버튼 클릭
+                    </p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4">
+                        <li>참여자 배정 된 담당자가 되도록 배정받은 당일 혹은 2일 이내 참여자에게 국민취업지원제도 참여 승인 및 배정사실 전달</li>
+                        <li>초기상담일정 참여자와 조율하여 정함(상담사의 상담일정을 고려)</li>
+                    </ul>
+
+                    <h3 id="chap1-1" class="text-2xl font-semibold mt-10 mb-4 pb-2 border-b">1-1. 참여자 관리 사이트 수정</h3>
+                    <p class="text-base leading-relaxed mb-4">
+                        배정받은 참여자는 <code class="bg-gray-200 px-2 py-1 rounded text-sm">http://jobmoaa.mycafe24.com/login.do</code> [잡모아 참여자 관리 사이트]에 [신규 참여자]에서 등록 진행
+                    </p>
+                    <img src="image/image02.png" alt="잡모아 신규 참여자 등록 (image02.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <p class="text-base leading-relaxed my-4">
+                        이름, 생년월일, 성별, 모집경로, 유형, 특정계층여부(2유형만) 필수 체크 후 [신규참여자등록]
+                    </p>
+                    
+                    <h4 class="text-lg font-semibold mt-6 mb-2">예시) 초기상담 일정에 따른 참여자에게 카톡안내</h4>
+                    <div class="example-box">안녕하세요.
+[국민취업지원제도] 민간위탁기관 (주)잡모아 성남지점 상담사 고성식입니다.
+<strong class="text-blue-600">김OO님 00월 00일(월) 00시에 상담 예약되었습니다.</strong> 상담시간에 방문하셔야 대기 없이 상담이 가능합니다.
+문의사항 및 일정변경요청은 ☎ 031-464-8886(내선973)으로 연락주세요. 감사합니다.
+
+■ 오시는길 : [지하철 모란역 1번출구 인근]
+주소: 성남시 중원구 광명로5, 모란 성남동메디칼센타 5층 503호
+(주)잡모아 성남지점 사무실 지도 위치안내:
+https://url.kr/b1lzi7
+(출처: 네이버지도)</div>
+
+                    <div class="mt-6 border-l-4 border-red-500 pl-4 py-2 bg-red-50 rounded-md">
+                        <p class="font-bold text-red-700">*주의사항</p>
+                        <p class="text-base text-red-700 leading-relaxed">
+                            IAP 수립 전 3번의 상담이 참여자의 인정통지일로부터 <strong>1개월 이내</strong> 이루어져야 함
+                            (상담간격은 영업일 기준으로 최소 하루의 간격으로 진행 예) 월-수-금 OR 수-금-월)
+                        </p>
+                        <p class="text-base text-red-700 leading-relaxed font-semibold mt-2">
+                            **각 고용센터별로 상담기한 기준 및 상담진행 가능 주기등은 다를 수 있으므로 선임 및 지점관리자에게 확인 필요!!!
+                        </p>
+                    </div>
+                </section>
+
+                <!-- 2. 초기상담 -->
+                <section id="chap2" class="content-section max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md mt-8">
+                    <h2 class="text-3xl font-bold mb-6 pb-3 border-b border-gray-200">2. 초기상담</h2>
+                    
+                    <p class="text-base leading-relaxed mb-4 font-semibold">*상담시 필요서류 지참: 초기상담일지(1유형/2유형)</p>
+                    
+                    <h4 class="text-lg font-semibold mt-6 mb-2">(내담자 방문시)</h4>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4">
+                        <li>[IAP등록/관리]-[상담정보]에서 [신규작성] 클릭</li>
+                        <li class="font-semibold text-red-600">“상담시간 0000~” 입력 후 저장은 누르지 말 것 &lt;- 중요!</li>
+                        <li>&gt;&gt;&gt; 상담진행 중에 신청취하사유 확인시 상담일지가 저장되어 있으면 취하가 불가하기 때문!!</li>
+                        <li>*예시 참조</li>
+                    </ul>
+                    <img src="image/image03.png" alt="상담정보 신규작성 (image03.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+
+                    <h4 class="text-lg font-semibold mt-6 mb-2">(상담진행 중)</h4>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4">
+                        <li>상담 종료 시점에 참여자와 다음 상담일정 및 직업선호도 검사 과제 부여 및 설명</li>
+                        <li class="font-semibold text-blue-600">**다음 방문일정은 무조건 지정!!!!</li>
+                        <li>&lt;&lt;&lt; 참여자가 나중에 일정 확인해보고 알려준다고 하더라도 일단 일정 잡은 후에 일정 변경 원하면 알려달라고 안내</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-6 mb-2">(상담완료 후)</h4>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4">
+                        <li>종료시간 확인하여 저장(신청취하 사유 없는 경우)</li>
+                        <li>참여자가 초기상담 중 작성한 역량평가지 및 상담사가 확인한 내용에 따른 취업역량평가 등록</li>
+                        <li>(역량평가 등록 및 취업역량평가 부분 작성)</li>
+                        <li>[IAP등록/관리]-[취업역량평가]-[등록]하여 저장</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-6 mb-2">구직신청 유형분류 판단 기준</h4>
+                    <p class="text-base leading-relaxed mb-4">
+                        *취업애로요인은 상담사 판단에 따라 구직성공을 위해 참여자에게 더 필요한 부분이 있다고 판단되는 부분에 체크<br>
+                        *취업지원을 위한 상담전략 부분 작성은 아래 참고
+                    </p>
+                    <div class="example-box">
+                        <strong class="text-blue-600">■참여동기(예시)</strong>
+                        -자체모집
+                        -ㅇㅇㅇㅇ대학교 ㅇㅇ디자인공학과 졸업(2000.00)
+                        -희망직무는 <span class="text-blue-600">시각디자이너</span> 희망함, 직무경력은 <span class="text-blue-600">0년</span> 있음
+                        -희망직무에 따른 채용정보 제공과 역량강화에 도움을 받기위해 참여함
+
+                        <strong class="text-blue-600 mt-4 block">■유형분류 및 근거(예시)</strong>
+                        -해당참여자는 <span class="text-blue-600">시각디자이너</span>를 희망하여 역량을 강화하고자 국민취업지원제도에 참여함
+
+                        <strong class="text-blue-600 mt-4 block">■상담목표 및 전략(고정)</strong>
+                        직업심리검사를 통해 흥미유형에 대한 자기 이해를 높이고 희망직종의 훈련과정 및 채용정보 탐색을 통해 준비해야 할 것들을 파악하여 취업지원 계획을 수립할 예정임
+                        적극적 구직활동을 독려하고 이력서와 자기소개서 클리닉을 통한 구직기술 향상 지원, 채용정보 제공 및 알선을 통해 취업으로 이어질 수 있게 진행할 예정임
+                    </div>
+
+                    <h3 id="chap2-0" class="text-2xl font-semibold mt-10 mb-4 pb-2 border-b">2-0. 구직신청서&인정통지서 출력</h3>
+                    <h4 class="text-lg font-semibold mt-6 mb-2">2-0-1. 구직신청서</h4>
+                    <img src="image/image04.png" alt="구직신청서 조회 (image04.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <p class="text-base leading-relaxed my-4">
+                        -참여자 [IAP등록/관리]화면에서 [구직신청서 조회] 선택 후 [이동] 클릭
+                    </p>
+                    <img src="image/image05.png" alt="구직신청서 등록 (image05.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <ul class="list-decimal list-outside pl-6 space-y-2 my-4">
+                        <li>해당 화면이 뜨면 참여자의 주소지, 핸드폰, 메일주소 입력 후 우측상단에 [등록]클릭</li>
+                        <li>아래로 스크롤하면 [구직마감 희망일]에서 [12개월] 클릭 후 맨위 상담 [수정]버튼 클릭</li>
+                        <li>이후 맨 아래로 스크롤하여 [구직신청서 출력] 클릭 후 개인정보 표시 “예”선택 후 모아찍기로 한 장짜리로 출력</li>
+                    </ul>
+                    <p class="text-base leading-relaxed mb-4">
+                        *구직신청서 조회시 주소지 등 이미 기입되어 있는 경우 ①을 건너뛰고 ②,③ 진행하면 됨
+                    </p>
+                    
+                    <h4 class="text-lg font-semibold mt-6 mb-2">2-0-2. 인정통지서</h4>
+                    <p class="text-base leading-relaxed mb-4">
+                        -해당 참여자 [수급자 조회]화면에서 검색 후 [인정통지서 출력] 클릭하여 출력
+                    </p>
+
+                    <h3 id="chap2-1" class="text-2xl font-semibold mt-10 mb-4 pb-2 border-b">2-1. 1유형 초기상담일지 입력(예시)</h3>
+                    <div class="example-box">
+<strong class="text-blue-600">[취업활동계획수립기간 / 초기상담]</strong>
+상담시간 1000~1048
+
+<strong>[수급자 자료수집 정리]</strong>
+-참여경로 : <span class="text-blue-600">자체모집</span>
+-수급자격 인정 통지일 : 2025.00.00
+-취업역량평가 : <span class="text-red-600">높음(C유형)</span>
+-가족사항 : 1인 가구
+-최종학력 : 00대학교 000학과 졸업(2000.00)
+-과거직장경력 : 2년이내 디자인 직무로 경력 8개월 있음. 2년 이전 3년반의 디자인 경력 있음
+-직무역량 및 자격사항 :없음
+-취업 희망직종 및 근로조건 : <span class="text-blue-600">시각디자이너 / 마케팅 디자인 관련 희망</span>
+-직업훈련 이력 : 최근 2년 이내 이젠IT아카데미에서 웹&앱 디자인 과정 수료한사실 확인함
+-취업지원 서비스 참여 이력 : 2022년도 국민취업지원제도 참여이력 있음(종료사유 : 취업)
+
+<strong>[국민취업지원제도 진행 및 유의사항 안내]</strong>
+-취창업 확인 및 프로그램 진행절차 안내
+-취업지원서비스 운영기간, 수당, 유의사항 안내
+-3,4회차 기간과 6회차 기간 중 대면상담 진행에 대해 안내함.
+-취업지원서비스 기간 내에 최종 3개월은 집중 취업알선 기간 운영임을 안내함.
+-수급자격 인정 철회 및 취업지원 종료 안내
+-내일을 위한 약속 및 개인정보 수집, 이용, 제공에 대한 동의서 안내 서명
+-국민취업지원제도와 연계된 프로그램(집단상담, 취업특강, 일경험 등) 안내
+-청년내일채움공제, 청년일자리 도약 장려금, 고용촉진장려금 안내
+-구직등록만료일 안내 및 재신청 방법 설명, 수급자 동의하에 구직유효기간을 연장함을 안내
+
+<strong>[상담 내용]</strong>
+-상기수급자는 <span class="text-blue-600">시각디자이너 / 마케팅 디자인 관련</span>을 희망하며 역량강화를 위한 도움을 받고자 국민취업지원제도에 참여함
+
+<strong>[과제 및 다음 회차 상담을 위한 준비활동]</strong>
+-과제 : <span class="text-blue-600">워크넷 직업선호도검사L형 실시</span>
+-심리검사 유의사항과 실시방법을 안내하였음.
+                    </div>
+
+                    <h3 id="chap2-2" class="text-2xl font-semibold mt-10 mb-4 pb-2 border-b">2-2. 2유형 초기상담일지 입력(예시)</h3>
+                    <div class="example-box">
+<strong class="text-blue-600">[취업활동계획수립기간 / 초기상담]</strong>
+상담시간 1258~1351
+
+<strong>[수급자 자료수집 정리]</strong>
+참여경로 : <span class="text-blue-600">센터배정</span>
+수급자격 인정 통지일 : 2025.01.10
+취업역량평가 : <span class="text-red-600">높음(C유형)</span>
+가족사항 : 2인가족(본인, 배우자)
+최종학력 : ㅇㅇ대학교 ㅇㅇ디자인학과 졸업(2000.00)
+과거직장경력 : 웹디자인(7년), 건설현장지원 업무(2년) 있음
+직무역량 및 자격사항 : 최근 2년 이내 취득한 자격증, 참여한 직업훈련, 인턴 및 일경험 프로그램 참여 없음.
+취업 희망직종 및 근로조건 : <span class="text-blue-600">건축설계 및 관련 계통</span>
+직업훈련 이력 : <span class="text-blue-600">수료이력은 없음, 현재 BIM 훈련 참여중</span>
+취업지원 서비스 참여 이력 : 실업급여 2000.00.00~2000.00.00까지 수령.
+
+<strong>[국민취업지원제도 진행 및 유의사항 안내]</strong>
+취창업 확인 및 프로그램 진행절차 안내
+취업지원서비스 운영기간, 수당, 유의사항 안내
+IAP 수립일 다음날로부터 2~3개월 이내, 5개월차 대면상담 진행에 대해 안내함
+취업지원서비스 기간 내에 최종 3개월은 집중 취업알선 기간 운영임을 안내함
+수급자격 인정 철회 및 취업지원 종료 안내
+내일을 위한 약속 및 개인정보 수집, 이용, 제공에 대한 동의서 안내 서명
+국민취업지원제도와 연계된 프로그램(집단상담, 취업특강, 일경험 등) 안내
+청년일자리도약장려금, 고용촉진장려금 안내
+구직등록만료일 안내 및 재신청 방법 설명, 수급자 동의하에 구직유효기간을 연장함을 안내
+
+<strong>[상담 내용]</strong>
+상기수급자는 ㅇㅇ대학교 ㅇㅇ디자인학과 졸업(2000.00)으로 희망직무를 탐색중임
+직업훈련, 구직정보 획득 등 전반적인 취업활동에 대한 도움을 받기 위해 국민취업지원제도에 참여하였다고 함
+<span class="text-blue-600">앞으로 상담방향 : 직업심리검사를 통해 자기에 대한 이해를 높이고 직무탐색 및 채용정보 검색을 통해 취업계획을 수립하기로 함</span>
+
+<strong>[과제 및 다음 회차 상담을 위한 준비활동]</strong>
+-과제 : <span class="text-blue-600">직업선호도검사L형 실시</span>
+-심리검사 유의사항과 실시방법을 안내하였음
+                    </div>
+                    
+                    <h4 class="text-lg font-semibold mt-6 mb-2">참여자에게 2회차 상담진행 및 진행과제 카톡안내</h4>
+                    <div class="example-box">
+안녕하세요.
+[국민취업지원제도] 민간위탁기관 (주)잡모아 성남지점 상담사 고성식입니다.
+<strong class="text-blue-600">ㅇㅇ님 00월 00일(월) 10시에 상담 예약되었습니다.</strong> 상담시간에 방문하셔야 대기 없이 상담이 가능합니다.
+문의사항 및 일정변경요청은 ☎ 031-464-8886(내선973)으로 연락주세요. 감사합니다.
+
+방문 전 과제:
+<strong>1)직업선호도 검사 L형</strong>
+https://www.work.go.kr/consltJobCarpa/jobPsyExamNew/jobPsyExamList.do
+                    </div>
+
+                    <h3 id="chap2-3" class="text-2xl font-semibold mt-10 mb-4 pb-2 border-b">2-3. 참여자 관리 사이트 수정</h3>
+                    <img src="image/image06.png" alt="잡모아 참여자 수정 (image06.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <p class="text-base leading-relaxed my-4">
+                        <code class="bg-gray-200 px-2 py-1 rounded text-sm">http://jobmoaa.mycafe24.com/login.do</code> [잡모아 참여자 관리 사이트]에서 초기상담진행한 참여자이름을 클릭한 후에 취업역량, 최근상담일, 초기상담일 입력 후 [참여자 수정] 클릭
+                    </p>
+                    <div class="mt-4 border-l-4 border-red-500 pl-4 py-2 bg-red-50 rounded-md">
+                        <p class="font-bold text-red-700">*취업역량 부분 작성 시 주의사항!!</p>
+                        <p class="text-base text-red-700 leading-relaxed">
+                            &gt;&gt;&gt; <strong class="text-red-700">*높음=D / *보통=C / *낮음=A or B</strong>
+                        </p>
+                    </div>
+                </section>
+                
+                <!-- 3. 직업심리검사 해석 -->
+                <section id="chap3" class="content-section max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md mt-8">
+                    <h2 class="text-3xl font-bold mb-6 pb-3 border-b border-gray-200">3. 직업심리검사 해석</h2>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4">
+                        <li>참여자 사전부여된 과제 이행 상담방문 전 필수로 확인</li>
+                        <li class="text-red-600">&gt;&gt;&gt; 안되어 있는 경우, 바로 연락하여 정해진 방문일정 전에 완료 가능한지 여부 확인 후 필요시 상담일정 변경(일정 변경 시 해당 내용 상담일지 기입)</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-6 mb-2">(상담진행시)</h4>
+                    <p class="text-base leading-relaxed mb-4 font-semibold">
+                        *상담시 필요서류 지참:
+                        1) 심리검사결과지, 2) 2회차 대면상담 과제, 3) 구직준비도 점검 체크리스트
+                    </p>
+
+                    <h4 class="text-lg font-semibold mt-6 mb-2">(상담진행중)</h4>
+                    <p class="text-base leading-relaxed mb-2 font-semibold">1) 심리검사결과지</p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4">
+                        <li>선임 및 지점관리자를 통해 심리검사 해석방법 숙지한 상태로 상담진행하여 내담자에게 결과지 해석 및 안내</li>
+                    </ul>
+
+                    <p class="text-base leading-relaxed mb-2 font-semibold">2) 2회차 대면상담 과제부여</p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4">
+                        <li>심리검사 결과지 해석 완료 후 과제부여 안내 및 설명 진행</li>
+                        <li><strong>3페이지 중 1,2페이지는 필수 진행</strong>(자세히 쓸 필요는 없음을 안내)</li>
+                        <li><strong>3페이지의 경우 훈련참여를 희망하는 경우</strong> 훈련기관 방문 및 상담진행하여 [훈련과정탐색표]를 제공받아 자필로 작성해야 함을 안내</li>
+                        <li>상담 종료 시점에 참여자와 <strong>다음 상담일정 조율(필수!)</strong></li>
+                        <li>3번째 방문상담시 과제수행제출과 통장사본이 필요함을 안내하고 통장사본은 모바일 은행 어플 사용하는 경우 3번째 방문상담시에 캡처 후 카톡으로 전송을 요청</li>
+                    </ul>
+
+                    <p class="text-base leading-relaxed mb-2 font-semibold">3) 구직준비도 점검 체크리스트</p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4">
+                        <li>혼자 작성하기보다는 참여자와 함께 상담사가 작성</li>
+                        <li>해당 결과에 대해서는 간단하게 2회차 대면 상담일지에 기재.(상담일지 작성 예시문 참고)</li>
+                    </ul>
+
+                    <h3 id="chap3-1" class="text-2xl font-semibold mt-10 mb-4 pb-2 border-b">3-1. 직업심리검사 해석 상담일지 입력(예시)</h3>
+                    <div class="example-box">
+<strong class="text-blue-600">[취업활동계획수립기간 / 직업심리검사해석]</strong>
+상담시간 1315~1347
+
+<strong>[직업선호도검사 L형 결과 해석]</strong>
+직업선호도검사는 개인의 관심과 흥미, 성향, 그리고 생활경험을 측정하여 적합한 직업을 안내하는 검사이고 흥미검사, 성격검사, 생활사검사로 구성되어 있음을 설명함
+
+<strong>1.직업흥미검사 해석(<span class="text-blue-600">흥미검사 유형 : AR</span>)</strong>
+- 육각형 모양이 <span class="text-blue-600">예술형 현실형</span>에 치우친 모양이고 크기가 크므로 특정 분야에 대한 관심이 뚜렷한 편임을 설명함
+- <span class="text-blue-600">예술형</span>은 창의적이고 변화를 추구하는 일을 좋아하고 <span class="text-blue-600">현실형</span>은 활동적이며 실물적인 일을 좋아하는 성향임을 설명함
+
+<strong>2. 성격검사 해석</strong>
+- 5가지 요인중 가장 높게 나온 건 <span class="text-blue-600">호감성</span>이고 가장 낮은 건 <span class="text-blue-600">외향성</span>임
+- <span class="text-blue-600">호감성</span>은 타인과 편안하고 조화로운 관계를 유지하는 정도임을 설명함
+- <span class="text-blue-600">외향성</span>은 타인과의 상호작용을 원하고 타인의 관심을 끌고자 하는 정도임을 설명함
+- 5가지 성격요인의 하위요인 중에서 70점 이상 높게 나온 건 <span class="text-blue-600">도덕성, 타인에 대한 배려와 수용성</span>임
+
+<strong>3. 생활사검사 해석</strong>
+- 9가지 요인 중 <span class="text-blue-600">예술성</span>이 가장 높고 두번재로 높은건 <span class="text-blue-600">운동선호</span>임
+- <span class="text-blue-600">예술성</span>은 예술적인 자질, 경험 및 관심 정도임을 설명함
+- <span class="text-blue-600">운동선호</span>는 운동에 관한 선호와 능력 정도임을 설명함
+
+<strong>[상담사의견 / 구직준비도 점검 체크리스트]</strong>
+- 상담 내용 정리 : 상기수급자는 현재 희망직무로 <span class="text-blue-600">개발자</span>를 희망함
+- 상기 수급자는 특별한 애로사항이나 호소문제는 없음을 확인함
+- 참여자의 초기상담 역량평가 및 구직준비도 점검 체크 진행결과 적극적인 구직의지를 가지고 있으며 이미 직무에 필요한 교육과정 수료 및 포트폴리오가 준비되었음에 따라 <span class="text-blue-600">즉시 취업을 위한 서비스 제공이 필요하다고 판단하여 빠른취업준비형으로 분류함</span>
+- 진로상담 및 과제에 대한 상담진행함
+- 직업 관련 심리적 속성 파악 후 적합한 직업선택을 위한 정보제공 예정임을 안내함
+
+<strong>[과제]</strong>
+- <span class="text-blue-600">고용24에서 훈련과정 탐색해 보기</span>
+- 참여자 <span class="text-blue-600">직업목표설정 분석</span>과 희망직무에 대한 <span class="text-blue-600">채용정보를 검색</span>해 볼 수 있도록 안내함
+- 진로설정 및 취업에 도움이 되는 취업지원 서비스를 알아볼 수 있도록 다시 안내함
+                    </div>
+                    
+                    <p class="text-base leading-relaxed my-4">
+                        이후 [IAP등록/관리]-[취업지원/구직활동]-컨설팅서비스에 직업심리검사해석 진행 내역 추가
+                    </p>
+                    <img src="image/image07.png" alt="직업심리검사 해석 내역 추가 (image07.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+
+                    <h4 class="text-lg font-semibold mt-6 mb-2">참여자에게 다음 상담일정 카톡전송</h4>
+                    <div class="example-box">
+안녕하세요.
+[국민취업지원제도] 민간위탁기관 (주)잡모아 성남지점 상담사 고성식입니다.
+<strong class="text-blue-600">조ㅇㅇ님 00월 00일(금) 00시에 상담 예약되었습니다.</strong> 상담시간에 방문하셔야 대기 없이 상담이 가능합니다.
+문의사항 및 일정변경요청은 ☎ 031-464-8886(내선973)으로 연락주세요. 감사합니다.
+
+방문 전 과제:
+<strong>1)활동지: 직업목표설정 분석하기/채용공고 탐색하기</strong>
+*워크넷
+https://www.work.go.kr/seekWantedMain.do
+*잡코리아
+https://www.jobkorea.co.kr/
+*사람인
+https://www.saramin.co.kr/zf_user/
+*인크루트
+https://www.incruit.com/
+*원티드
+https://www.wanted.co.kr/jobsfeed
+*점핏
+https://www.jumpit.co.kr/
+*게임잡
+https://www.gamejob.co.kr/main/home
+                    </div>
+                    <p class="text-base leading-relaxed my-4 p-4 bg-blue-50 border border-blue-200 rounded-md">
+                        - 카톡 안내 시 참여자의 희망직무에 맞춰 다양한 채용공고를 찾아 볼 수 있도록 많은 사이트를 제시해 주는 것이 참여자 신뢰를 얻는데에 도움이 될 수 있음(작성자 개인 의견).
+                    </p>
+
+                    <h3 id="chap3-2" class="text-2xl font-semibold mt-10 mb-4 pb-2 border-b">3-2. 참여자 관리 사이트 수정</h3>
+                    <img src="image/image08.png" alt="잡모아 참여자 수정 (image08.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <p class="text-base leading-relaxed my-4">
+                        <code class="bg-gray-200 px-2 py-1 rounded text-sm">http://jobmoaa.mycafe24.com/login.do</code> [잡모아 참여자 관리 사이트]에서 참여자 이름 클릭 후, [최근상담일] 변경 후 [참여자 수정] 클릭
+                    </p>
+                </section>
+
+                <!-- 4. IAP 수립 -->
+                <section id="chap4" class="content-section max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md mt-8">
+                    <h2 class="text-3xl font-bold mb-6 pb-3 border-b border-gray-200">4. IAP 수립(3번째 방문)</h2>
+                    
+                    <p class="text-base leading-relaxed mb-2 font-semibold">*상담시 필요서류 지참:</p>
+                    <p class="text-base leading-relaxed mb-2 ml-4 font-semibold">-1유형</p>
+                    <ul class="list-decimal list-outside pl-10 space-y-2 mb-4">
+                        <li>구직촉진수당신청서</li>
+                        <li>소득신고서</li>
+                        <li>가족수당신청서(해당자만)</li>
+                        <li>취업활동계획서(상담진행중 희망조건 설정 완료 후)</li>
+                    </ul>
+                    <p class="text-base leading-relaxed mb-2 ml-4 font-semibold">-2유형</p>
+                    <ul class="list-decimal list-outside pl-10 space-y-2 mb-4">
+                        <li>참여수당신청서</li>
+                        <li>취업활동계획서(상담진행중 희망조건 설정 완료 후)</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-6 mb-2">(상담진행중)</h4>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4">
+                        <li>3번째 방문 상담시 IAP 등록 및 취업활동계획 수립위한 희망직무 등 변경 필요</li>
+                        <li>고용24(<code class="bg-gray-200 px-2 py-1 rounded text-sm">https://www.work24.go.kr/cm/main.do#none</code>) 접속하여 참여자 간편인증을 통한 참여자의 아이디로 로그인</li>
+                    </ul>
+                    <img src="image/image09.png" alt="고용24 로그인 (image09.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <ul class="list-disc list-outside pl-6 space-y-2 my-4">
+                        <li>참여자와 협의하여 희망직무, 희망지역, 고용형태, 희망임금, 희망 근무시간을 지정하여 기입한 후에 맨아래로 스크롤하여 [이력서 작성완료] 클릭</li>
+                        <li>상담실에서 해당 내용 완료 후 참여자에게 수당신청서, <strong>소득신고서(1유형 소득발생여부 상관없이 필수 작성)</strong>, 만족도 조사 참여 안내</li>
+                        <li>참여자 통장사본을 전달받고 기다려달라고 안내 후 전산상 IAP 취업활동계획 작성 진행</li>
+                    </ul>
+                    <img src="image/image10.png" alt="IAP 취업활동계획 작성 (image10.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    
+                    <div class="mt-6 border-l-4 border-red-500 pl-4 py-2 bg-red-50 rounded-md">
+                        <p class="font-bold text-red-700">※주의사항</p>
+                        <ol class="list-decimal list-outside pl-6 space-y-3 my-4 text-red-700">
+                            <li>
+                                <strong>희망직무 설정시</strong> 최대한 범위를 넓혀서 잡을 것<br>
+                                <span class="text-sm">예시) UX/UI 디자이너 희망자는 해당 직무와 병행 가능한 웹 디자이너 추가
+                                <br>인사 사무원 희망자의 경우 총무 및 일반 사무원/회계 사무원 추가</span>
+                            </li>
+                            <li>
+                                <strong>희망지역은</strong> 서울/경기를 기본으로 하여 그보다 범위를 넓히되 되도록 좁히지는 말 것<br>
+                                <span class="text-sm">(인천의 경우 인천을 기본으로 포함하여 추가 지역 설정)<br>
+                                -&gt; 참여자가 구단위로만 구직활동 희망하는 경우에도 되도록 최소한 시단위로 잡아야 함<br>
+                                -&gt; 희망지역 설정은 넓게 잡되 채용정보 제공시 원하는 실제 희망지역을 반영하여 정보제공 할 것임을 안내</span>
+                            </li>
+                            <li>
+                                <strong>고용형태도</strong> 직무의 특성에 따라 계약직 후 정규직 전환 등도 지원 및 제공 가능할 수 있도록 <strong>“관계없음”</strong>으로 설정
+                            </li>
+                            <li>
+                                <strong>소득신고서 작성 전에</strong> 1회차 지원대상기간에 맞춰 소득발생내역 확인을 꼼꼼히 할 것!<br>
+                                <div class="pl-4 text-sm">
+                                (1) IAP수립 위한 설정 진행하면서 오른쪽 창에서 [근무이력]에서 <strong>[고용보험 가입이력], [고용보험 일용근로이력]</strong> 확인 진행<br>
+                                =&gt;최근에 근로한 이력이 있는지, 입금이 지원대상기간에 발생했는지를 확인하는 작업
+                                </div>
+                            </li>
+                        </ol>
+                        <img src="image/image12.png" alt="고용보험 가입이력 확인 (image12.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                        <p class="text-sm text-red-700 leading-relaxed my-2 ml-10">
+                            *붉은색 박스 확인, 검은색은 개인정보 보호위한 비공개 조치
+                        </p>
+                        <div class="pl-10 text-sm text-red-700">
+                            (2) 내일배움카드를 통한 140시간 이상의 훈련참여자의 경우 오른쪽 창에서 [훈련]에서 <strong>[훈련장려금 지급내역]</strong> 추가 확인 진행<br>
+                            =&gt;훈련장려금도 소득신고 대상이 되는 금액이므로 확인이 필수(취업지원프로그램)
+                        </div>
+                        <img src="image/image13.png" alt="훈련장려금 지급내역 확인 (image13.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                        <p class="text-sm text-red-700 leading-relaxed my-2 ml-10">
+                            *붉은색 박스확인, 검은색은 개인정보 보호위한 비공개 조치
+                        </p>
+                    </div>
+
+                    <h3 id="chap4-1" class="text-2xl font-semibold mt-10 mb-4 pb-2 border-b">4-1. 1유형 취업활동계획 수립(IAP 수립)</h3>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4">
+                        <li>-[IAP등록/관리]-[지급계획]에서 <strong class="text-red-600">[행추가]☓6회</strong> 클릭을 통해 1회차부터 6회차까지 구직촉진수당 지원대상 기간 우선 확인</li>
+                    </ul>
+                    <img src="image/image14.png" alt="지급계획 행추가 (image14.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <ul class="list-disc list-outside pl-6 space-y-2 my-4">
+                        <li>-회차별 신청일(지정일)이 주말, 공휴일인지 확인 후 주말/공휴일에 해당되면 <strong class="text-red-600">영업일(평일)로 날짜를 당겨서 지정</strong>&gt;&gt;&gt;지역별 상이하므로 각 선임 및 지점관리자에게 꼭 확인!</li>
+                        <li>-확인된 지정일/지원대상 기간에 맞춰 구직촉진수당 수급위한 구직활동 및 서비스종료일까지의 취업활동계획을 설정</li>
+                    </ul>
+                    <img src="image/image15.png" alt="취업활동계획 설정 (image15.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+
+                    <h4 id="chap4-1-1" class="text-xl font-semibold mt-8 mb-4">4-1-1. 구직촉진수당 지급조건(구직활동 2회 이상)설정 기준</h4>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4">
+                        <li class="font-semibold">✓ 구직촉진수당 지급 요건은 각 회차별 기간마다 <strong class="text-red-600">구직활동 2회 이상</strong>에 해당되는 구직활동으로 잡아야 함</li>
+                        <li class="font-semibold">*구직활동 2회에 해당되는 활동(2025년도 업무매뉴얼 P.176~181)</li>
+                        <ul class="list-circle list-outside pl-6 space-y-1 mt-2">
+                            <li>-&gt; 지원대상기간내 <strong class="text-blue-600">10일 이상의 훈련을 80% 이상 출석</strong></li>
+                            <li>-&gt; 지원대상기간내 <strong class="text-blue-600">입사지원 2회</strong></li>
+                            <li>-&gt; <strong class="text-blue-600">2일 이상의 집단상담 프로그램 수료</strong>(수료일 기준)</li>
+                        </ul>
+                        <li class="font-semibold mt-2">*구직활동 1회에 해당되는 활동(2025년도 업무매뉴얼 P.176~181)</li>
+                        <ul class="list-circle list-outside pl-6 space-y-1 mt-2">
+                            <li>-&gt; 지원대상기간내 10일 미만의 훈련을 80% 이상 출석</li>
+                            <li>-&gt; 입사지원 컨설팅 1회</li>
+                            <li>-&gt; 입사지원 1회</li>
+                        </ul>
+                        <li class="mt-2">**상기 내용에 기재하지 않은 구직활동 인정기준은 해당년도 매뉴얼을 확인.</li>
+                        <li class="mt-2 font-semibold text-red-600 bg-yellow-100 p-2 rounded">✓ 처음으로 1유형 구직촉진수당 지급계획 및 주기 설정하는 경우,
+                        <br>꼭 반드시 필수로 선임 및 지점관리자에게 확인 요청 후 진행!!</li>
+                    </ul>
+
+                    <h4 id="chap4-1-2" class="text-xl font-semibold mt-8 mb-4">4-1-2. 훈련참여 여부에 따른 설정방법 예시</h4>
+                    <p class="text-base leading-relaxed mb-2 font-semibold">✓ 훈련참여자의 경우</p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4">
+                        <li>-회차별 지원대상상기간내 훈련일정이 <strong class="text-blue-600">10일 이상의 경우 구직활동 2회로 인정</strong></li>
+                        <li>-회차별 지원대상기간내 훈련일정이 <strong class="text-blue-600">10일 미만의 경우 구직활동 1회로 인정</strong></li>
+                        <li class="text-red-600">*훈련참여자들은 특히 지원대상기간 내 10일 이상의 훈련참여시에는 입사지원은 되도록 하지 않도록 설정 주의</li>
+                        <li>*입사지원서 컨설팅은 참여자 희망 혹은 상담사 판단하에 훈련 출결에 영향을 끼치지 않는 전제하에 진행 가능,</li>
+                        <li>*지원대상기간내 10일 미만의 훈련자의 경우 2회차면 <strong class="text-blue-600">온라인교육 1회이상 수료</strong> 설정</li>
+                        <li>*지원대상기간내 10일 미만의 훈련자의 경우 3회차 이후면 <strong class="text-blue-600">입사지원컨설팅1회(1회만) OR 입사지원서제출 1회</strong> 설정</li>
+                    </ul>
+
+                    <p class="text-base leading-relaxed mb-2 font-semibold">✓ 직업훈련 미참여자 혹은 미참여 기간의 경우</p>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4">
+                        <li>-2회차 지원대상기간에는
+                        <strong class="text-blue-600">[기타-시선을 사로잡는 서류전형 준비]</strong>
+                        <strong class="text-blue-600">[기타-마음을 사로잡는 서류전형 준비]</strong>로 2회차의 기간내 진행할 수 있도록 설정</li>
+                        <li>-3회차 지원대상기간에는 <strong class="text-blue-600">입사지원제출 2건, 이력서컨설팅 1건</strong>으로 설정
+                        (필수방문이 이루어져야 하는 시기임에 따라 방문시 컨설팅을 함께 진행할 수 있도록)</li>
+                        <li>-이후 4,5,6회차 서비스 종료일까지 <strong class="text-blue-600">입사지원서 제출 2회 진행</strong>으로 설정</li>
+                    </ul>
+                    
+                    <h4 id="chap4-1-3" class="text-xl font-semibold mt-8 mb-4">4-1-3. 취업활동계획서 작성완료 및 출력하기</h4>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4">
+                        <li>-위에 내용을 참고하여 [취업활동계획]과 [지급계획] 작성이 완료되면, 우측 상단 <strong class="text-red-600">[IAP 등록 완료]</strong> 클릭 이후 활성화된 <strong class="text-red-600">[취업활동계획(IAP)출력]</strong>을 클릭</li>
+                    </ul>
+                    <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+                        <figure class="flex-1">
+                            <img src="image/image16.png" alt="IAP 등록 완료 (image16.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm">
+                            <figcaption class="text-center text-sm text-gray-500 mt-2">IAP 등록 완료 (image16.png)</figcaption>
+                        </figure>
+                        <figure class="flex-1">
+                            <img src="image/image17.png" alt="취업활동계획(IAP) 출력 (image17.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm">
+                            <figcaption class="text-center text-sm text-gray-500 mt-2">취업활동계획(IAP) 출력 (image17.png)</figcaption>
+                        </figure>
+                    </div>
+                    <ul class="list-disc list-outside pl-6 space-y-2 my-4">
+                        <li>-인쇄하기-&gt;옵션-&gt;모아찍기, 가로 선택 후 확인-&gt;확인 눌러 출력</li>
+                        <li>-참여자의 통장사본(파일로 받은 경우)까지 출력하여 상담실 복귀</li>
+                        <li>-취업활동계획서상 수립된 내용과 지원대상기간, 지정일 안내</li>
+                        <li>-이후 미완성된 수당신청서, 소득신고서 작성 완료 및 출력된 취업활동계획서 참여자와 상담사 모두 서명 완료</li>
+                        <li>-(선택사항) 상담종료 후 취업활동계획서 스캔하여 참여자 관리하는 폴더에 저장
+                        -&gt;추후 수당신청시, 취업처리에 따른 위탁비 신청시 첨부 필요</li>
+                        <li class="font-semibold text-red-600">-(필수사항) 소득신고서(발생여부와 관계없이) 스캔</li>
+                        <li class="font-semibold text-red-600">-(필수사항) 수당신청서, 취업활동계획서, 통장사본은 1부 복사하여 원본은 참여자 파일(오른쪽)에 첨부, 1부는 수당신청서 제출</li>
+                    </ul>
+
+                    <h4 id="chap4-1-4" class="text-xl font-semibold mt-8 mb-4">4-1-4. 1유형 취업활동계획 수립후 1회차 구직촉진수당 신청</h4>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4">
+                        <li>-전산상 좌측메뉴에서 [지원금관리]-[구직촉진수당 등록] 클릭</li>
+                    </ul>
+                    <img src="image/image18.png" alt="구직촉진수당 등록 (image18.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <ul class="list-disc list-outside pl-6 space-y-2 my-4">
+                        <li><strong class="text-blue-600">소득발생내역에 소득발생사실이 있는 경우</strong> 내용 입력 후 소득신고서 첨부 (소득발생금액이 50만원 이상인 경우 입금내역도 첨부)</li>
+                        <li><strong class="text-blue-600">1회차 지원대상기간내 소득 없는 경우</strong> 소득신고서만 첨부</li>
+                        <li>[수당 지급조건] 미체크 되어 있는 항목 전부 체크후 [저장] 클릭</li>
+                        <li>[지급계좌]-[계좌등록] 클릭</li>
+                    </ul>
+                    <img src="image/image19.png" alt="계좌등록 (image19.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <ul class="list-disc list-outside pl-6 space-y-2 my-4">
+                        <li>계좌주관계 -&gt; <strong>본인</strong></li>
+                        <li>통장사본상의 은행명 계좌번호 입력 후 [등록]클릭-활성화된 [계좌확인]클릭 5초후 아래내용 뜨면 [저장] 후 [닫기]</li>
+                    </ul>
+                    <img src="image/image20.png" alt="계좌확인 완료 (image20.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <ul class="list-disc list-outside pl-6 space-y-2 my-4">
+                        <li>해당 내용까지 진행 완료후 <strong class="text-red-600">[저장]-[민원접수요청]-[검토요청]</strong>까지 진행</li>
+                    </ul>
+
+                    <h4 id="chap4-1-5" class="text-xl font-semibold mt-8 mb-4">4-1-5. 1유형 상담일지 작성 예시</h4>
+                    <div class="example-box">
+<strong class="text-blue-600">[취업활동계획수립 기간 / 취업활동계획 수립]</strong>
+상담시간 1828~1904
+
+<strong>[취업활동계획수립 기간 / 취업활동계획 수립 ]</strong>
+- 상담목표 구체화(취업활동계획 수립) 및 조정
+- 구직촉진수당 지급신청서 안내 및 작성(처리기한 안내)
+- 최종 취업활동계획을 수립하고 성실히 수행하겠다는 자필 서명을 함
+- 3회차, 4회차 기간중 중 1회 대면상담과 취업지원서비스 기간 내에 최종 3개월은 집중 취업알선 기간 운영 계획임을 다시 설명함
+- 수급자격자의 취업 및 창업 희망조건
+  * <span class="text-blue-600">희망직종 : 데이터 분석가(빅데이터 분석가) / 웹 개발자(웹 엔지니어·웹 프로그래머)</span>
+  * <span class="text-blue-600">희망근무지 : 서울 / 경기</span>
+  * 희망임금 : 미지정 / 면접 후 결정 가능
+  * 근무가능시간 : 미지정
+- <span class="text-red-600">현재 근로상황 : 편의점 아르바이트 진행중이나 팔 부상으로 8월만 미근로</span>
+
+<strong>[취업지원 프로그램 활동 계획]</strong>
+- <span class="text-blue-600">직업훈련 :</span>
+  1. 훈련기관: ㅇㅇㅇㅇㅇ개발원
+  2. 훈련과정: ㅇㅇㅇㅇㅇ(JAVA) 풀스택 개발자 취업캠프
+  3. 훈련기간: 2025-00-00 ~2026-00-00(실제훈련기간 : 2025-07-21 ~2026-02-10)
+
+<strong>[구직활동지원 프로그램 활동계획]</strong>
+- <span class="text-blue-600">입사지원서 제출:</span> 훈련수료일 다음날부터 월 2회이상하기로 계획함
+- <span class="text-blue-600">입사지원 컨설팅:</span> 훈련수료일 다음날부터 1달 이내에 1회 진행하기로 함
+
+<strong>[1회차 구직촉진수당 신청]</strong>
+- <span class="text-red-600">소득발생내역 확인함</span>
+  <span class="text-red-600">* 500,000원 / 근로소득_편의점아르바이트_0월분 / 2025.00.00</span>
+- 취업예정없음을 확인함
+- 가족수당 신청대상 가구원 없음을 확인함
+- 처리기한 안내함
+
+<strong>[상담 내용]</strong>
+- 해당참여자는 ㅇㅇㅇ대학교 ㅇㅇㅇㅇㅇㅇㅇㅇ학과 졸업예정(2000.00)임, 희망직무는 경력이 없음을 확인함
+- 취업지원 서비스 기간은 수급인정 통지일로부터 1년으로 정함
+- 2회차 지정일 및 구직촉진수당 지급요건에 대해 설명함
+- 문의사항이나 변동사항 발생시 연락달라고 함
+                    </div>
+
+                    <h3 id="chap4-2" class="text-2xl font-semibold mt-10 mb-4 pb-2 border-b">4-2. 2유형 취업활동계획 수립(IAP 수립)</h3>
+                    <p class="text-base leading-relaxed mb-2 font-semibold">*훈련미참여자의 경우</p>
+                    <img src="image/image21.png" alt="2유형 훈련미참여 IAP (image21.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <ul class="list-disc list-outside pl-6 space-y-2 my-4">
+                        <li><strong class="text-blue-600">입사지원서 제출 :</strong> IAP수립 다음날부터~서비스 종료일까지 월 2회로 설정</li>
+                        <li><strong class="text-blue-600">입사지원에 필요한 컨설팅 참여 :</strong> IAP수립 후 2개월되는 시점에 1달기간잡고 1회 진행으로 설정</li>
+                        <li>이후 [IAP 등록완료]</li>
+                    </ul>
+
+                    <p class="text-base leading-relaxed mb-2 font-semibold">*훈련참여자의 경우</p>
+                    <img src="image/image22.png" alt="2유형 훈련참여 IAP (image22.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <ul class="list-disc list-outside pl-6 space-y-2 my-4">
+                        <li><strong class="text-blue-600">입사지원서 제출 :</strong> 훈련수료다음날부터 서비스 종료일까지 월 2회로 설정</li>
+                        <li><strong class="text-blue-600">입사지원에 필요한 컨설팅 :</strong><br>
+                        -&gt; (종일, 주5일의 경우) 훈련수료다음날부터 1달이내 1회로 설정<br>
+                        -&gt; (훈련기간중 방문가능한 일정의 훈련인 경우) IAP수립 후 2개월되는 시점에 1달기간잡고 1회 진행으로 설정
+                        </li>
+                        <li>이후 [IAP 등록완료]</li>
+                    </ul>
+
+                    <h4 id="chap4-2-1" class="text-xl font-semibold mt-8 mb-4">4-2-1. 2유형 취업활동계획 수립후 참여수당 신청</h4>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4">
+                        <li><strong class="text-blue-600">취업지원서비스기간 시작 후 IAP수립일 전까지</strong> 고용센터 등에서 대면으로 진행하는 구직자역량강화프로그램 수료이력 있는 경우, [IAP등록/관리]-[취업지원/구직활동]-[근로의욕/취업기술 향상 프로그램]에서 사전에 등록</li>
+                    </ul>
+                    <img src="image/image23.png" alt="구직자역량강화프로그램 등록 (image23.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <ul class="list-disc list-outside pl-6 space-y-2 my-4">
+                        <li>-전산상 좌측메뉴에서 [지원금관리]-[참여수당 등록] 클릭</li>
+                    </ul>
+                    <img src="image/image24.png" alt="참여수당 등록 (image24.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <ul class="list-disc list-outside pl-6 space-y-2 my-4">
+                        <li>-[참여내역] 확인 후 증빙서류(수료증, 참여확인서 등) 첨부(수료이력 있는 사람만)</li>
+                        <li>-[정상지급]체크, [요청일자]=IAP수립일, [계좌등록]은 *4-1-4. 1유형 취업활동계획 수립후 1회차 구직촉진수당 신청* 참고, [지급여부]-[지급]체크, [참여수당 지급액] 참여내역에 맞춰 체크</li>
+                        <li>-이후 우측상단 <strong class="text-red-600">[저장]-[민원접수요청]-[검토요청]</strong> 클릭</li>
+                    </ul>
+                    <img src="image/image25.png" alt="참여수당 민원접수 (image25.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    
+                    <h4 id="chap4-2-2" class="text-xl font-semibold mt-8 mb-4">4-2-2. 2유형 상담일지 작성 예시(훈련참여)</h4>
+                    <div class="example-box">
+<strong class="text-blue-600">[고용24알선]</strong>
+상담시간 1405~1436
+
+<strong class="text-blue-600">[취업활동계획수립 기간 / 취업활동계획 수립]</strong>
+- 상담목표 구체화(취업활동계획 수립) 및 조정
+- 최종 취업활동계획을 수립하고 성실히 수행하겠다는 자필 서명을 함
+- IAP 수립일 다음날로부터 2개월 3개월 되는 시점중에 1회 구직활동 재진단을 위해 대면 상담 진행함을 안내함
+- 취업지원서비스 기간 내에 최종 3개월은 집중취업알선 기간 운영함을 설명함
+- 수급자격자의 취업 및 창업 희망조건
+  * <span class="text-blue-600">희망직종 : 미용사</span>
+  * <span class="text-blue-600">희망근무지 : 서울 / 경기</span>
+  * 희망임금 : 면접 후 결정 가능
+  * 근무가능시간 : 00:00~00:00
+
+<strong>*취업지원 프로그램 활동 계획</strong>
+- <span class="text-blue-600">직업훈련 :</span>
+  1. 훈련기관: 000헤어아카데미ㅇㅇ점학원
+  2. 훈련과정: 미용사(일반) ㅇㅇ 국가자격증 과정
+  3. 훈련기간: 2000-00-00~2000-00-00(0회차)
+
+<strong>[구직활동지원 프로그램 활동계획]</strong>
+- <span class="text-blue-600">입사지원서 제출:</span> 훈련수료일 다음날부터 서비스종료일까지 월 2회이상하기로 계획함
+- <span class="text-blue-600">입사지원 컨설팅:</span> 훈련수료다음날부터 1달 이내에 1회 진행하기로 함
+
+<strong>[취업활동계획수립 참여수당 신청]</strong>
+- 참여수당 신청서 작성함
+- <strong class="text-red-600">대면 취업특강수료이력 없음을 확인함</strong>
+- 처리기한 안내함
+
+<strong>[상담 내용]</strong>
+- 상기 수급자격자는 <span class="text-blue-600">미용사</span>로 취업을 희망함, 미용사 직무로 취업을 위해서 <span class="text-blue-600">직업 훈련 신청 및 00.00부터 훈련참여 예정</span>임
+- 취업지원서비스기간은 인정통지일로부터 1년으로 정함
+- 변동사항 및 문의사항 발생시 연락달라고 안내함
+                    </div>
+
+                    <h4 id="chap4-2-3" class="text-xl font-semibold mt-8 mb-4">4-2-3. 2유형 상담일지 작성 예시(훈련미참여)</h4>
+                    <div class="example-box">
+<strong class="text-blue-600">[취업활동계획수립기간 / 취업활동계획수립 / 참여수당신청]</strong>
+상담시간 1111~1212
+
+<strong class="text-blue-600">[취업활동계획수립 기간 / 취업활동계획 수립]</strong>
+- 상담목표 구체화(취업활동계획 수립) 및 조정
+- 최종 취업활동계획을 수립하고 성실히 수행하겠다는 자필 서명을 함
+- IAP 수립일 다음날로부터 2개월 3개월 되는 시점중에 1회 구직활동 재진단을 위해 대면 상담 진행함을 안내함
+- 취업지원서비스 기간 내에 최종 3개월은 집중취업알선 기간 운영함을 설명함
+- 수급자격자의 취업 및 창업 희망조건
+  * <span class="text-blue-600">희망직종 : 도시 계획·설계가</span>
+  * <span class="text-blue-600">희망근무지 : 지역무관</span>
+  * <span class="text-blue-600">희망임금 : 연봉 5,000만원</span> / 면접 후 결정 가능
+  * 근무가능시간 : 09:00~18:00
+
+<strong>[구직활동지원 프로그램 활동계획]</strong>
+- <span class="text-blue-600">입사지원서 제출:</span> IAP 수립 다음날부터 서비스종료일까지 월 2회 이상하기로 계획함
+- <span class="text-blue-600">입사지원 컨설팅:</span> IAP수립 후 2개월 되는 시점에 1회 진행하기로 함
+
+<strong>[취업활동계획수립 참여수당 신청]</strong>
+- 참여수당 신청서 작성함
+- <strong class="text-red-600">대면 취업특강수료이력 없음을 확인함</strong>
+- 처리기한 안내함
+
+<strong>[상담 내용]</strong>
+- 상기 수급자격자는 <span class="text-blue-600">도시 계획·설계가</span>를 망하며 경력이 없음을 확인함.
+- 참여자는 석사 수료 예정으로 현재 보유중인 역량을 바탕으로 구직활동 진행 후 상황에 따라 추가적인 훈련과정 탐색해 보기로 함
+- 문의사항이나 변동사항 있으면 연락달라고 안내함
+                    </div>
+
+                    <h3 id="chap4-3" class="text-2xl font-semibold mt-10 mb-4 pb-2 border-b">4-3. 참여자 관리 사이트 수정(1유형+2유형)</h3>
+                    <img src="image/image26.png" alt="잡모아 참여자 IAP수립일 수정 (image26.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <p class="text-base leading-relaxed my-4">
+                        <code class="bg-gray-200 px-2 py-1 rounded text-sm">http://jobmoaa.mycafe24.com/login.do</code> [잡모아 참여자 관리 사이트]에서 (1)최근상담일, (2)진행단계, (3)IAP수립일 변경 및 입력 후 [참여자 수정] 클릭
+                    </p>
+                </section>
+
+                <!-- 5. 알선 -->
+                <section id="chap5" class="content-section max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md mt-8">
+                    <h2 class="text-3xl font-bold mb-6 pb-3 border-b border-gray-200">5. 알선</h2>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4 font-semibold text-red-600 bg-red-50 p-4 rounded-md">
+                        <li>알선 진행 시 참여자의 지원의사 확인은 필수로 진행</li>
+                        <li>알선 진행에 따른 증빙자료 확보 필수!</li>
+                    </ul>
+
+                    <h3 id="chap5-1" class="text-2xl font-semibold mt-10 mb-4 pb-2 border-b">5-1. 고용24 알선</h3>
+                    <p class="text-base leading-relaxed mb-2 font-semibold">고용24 알선 진행 시 증빙자료</p>
+                    <ul class="list-decimal list-outside pl-6 space-y-2 mb-4">
+                        <li>알선장</li>
+                        <li>채용공고</li>
+                        <li>채용정보제공내역+지원의사 확인 답변(카톡캡처본)<br>
+                        -&gt;3) 채용정보제공내역 캡처 시, 참여자의 지원의사 있다는 답변까지 받아서 캡처<br>
+                        <span class="text-red-600">*유선으로 지원의사 확인했더라도 카톡에 지원의사 있다고 한번 더 답장받기</span></li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-6 mb-2">5-1-1. 알선진행 및 증빙자료</h4>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4">
+                        <li>채용정보제공이 고용24를 통해 참여자의 희망직무에 맞게 제공 됐음을 전제</li>
+                        <li>3)채용정보제공내역+지원의사 확인 답변(카톡캡처본) 확보</li>
+                        <li>제공한 채용공고 아래쪽에 [인증기관 정보]-<strong class="text-red-600">[구인인증번호]</strong> 복사</li>
+                    </ul>
+                    <img src="image/image28.png" alt="구인인증번호 복사 (image28.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <ul class="list-disc list-outside pl-6 space-y-2 my-4">
+                        <li>알선진행할 참여자의 [구직인증번호]를 클릭하여 팝업창에서 <strong class="text-red-600">[알선]</strong> 클릭</li>
+                    </ul>
+                    <img src="image/image29.png" alt="구직인증번호 알선 클릭 (image29.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <ul class="list-disc list-outside pl-6 space-y-2 my-4">
+                        <li>-[구직알선(상용)] 화면에서 <strong class="text-blue-600">[구인지정알선]</strong> 탭 클릭, 아래화면처럼 복사한 [구인인증번호] 붙여넣기 후 [검색]클릭, 상담내용에 내용 입력 후 요청경로 : <strong class="text-blue-600">[센터알선]</strong> 선택 후 <strong class="text-red-600">[알선]</strong>클릭</li>
+                    </ul>
+                    <img src="image/image30.png" alt="구인지정알선 (image30.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <ul class="list-disc list-outside pl-6 space-y-2 my-4">
+                        <li>이후 화면에서 상담내용에 내용 입력 후 <strong class="text-red-600">[알선장 발행]</strong> 클릭하여 출력 후 2), 3)과 함께 실물로 참여자 파일에 보관</li>
+                    </ul>
+                    
+                    <h4 class="text-lg font-semibold mt-6 mb-2">5-1-2. 고용24 알선 상담일지(예시, 유선)</h4>
+                    <div class="example-box">
+<strong class="text-blue-600">[고용24알선]</strong>
+상담시간 1204~1212
+
+<strong>[고용24알선]</strong>
+- <span class="text-blue-600">회 사 명 : 동ㅇㅇㅇ(주)</span>
+- <span class="text-blue-600">직 무 : 화학공학 기술자 및 연구원</span>
+- <span class="text-blue-600">급 여 : 연봉 3,100만원</span>
+- <span class="text-blue-600">근무지 : 대전 대덕구</span>
+- <span class="text-blue-600">정보제공처 : 고용24</span>
+- 채용담당자 : ㅇㅇㅇ / 000-000-0000
+- 참여자의 지원의사 확인하여 알선진행함
+- 변동사항 및 문의사항 발생시 연락달라고 안내함
+                    </div>
+
+                    <h3 id="chap5-2" class="text-2xl font-semibold mt-10 mb-4 pb-2 border-b">5-2. 외부구인정보소개(외부알선)</h3>
+                    <p class="text-base leading-relaxed mb-2 font-semibold">외부구인정보소개(외부알선) 진행 시 증빙자료</p>
+                    <ul class="list-decimal list-outside pl-6 space-y-2 mb-4">
+                        <li>메일발송내용 or 입사지원내역(공고상 업체에 연락할 수단 없는 경우에만)</li>
+                        <li>채용공고</li>
+                        <li>채용정보제공내역+지원의사 확인 답변(카톡캡처본)<br>
+                        -&gt;3) 채용정보제공내역 캡처 시, 참여자의 지원의사 있다는 답변까지 받아서 캡처<br>
+                        <span class="text-red-600">*유선으로 지원의사 확인했더라도 카톡에 지원의사 있다고 한번 더 답장받기</span></li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-6 mb-2">5-2-1. 알선진행 및 증빙자료</h4>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4">
+                        <li>채용정보제공이 고용24외의 수단을 통해 참여자의 희망직무에 맞게 제공 됐음을 전제</li>
+                        <li>참여자에게 채용정보제공 + 참여자의 지원의사 확인 및 답변 확보</li>
+                        <li>채용공고상 채용담당자에게 연락 가능한 수단 확인하여 연락 후 인재 추천 및 이력서 등 메일발송(가능시)</li>
+                        <li>발송한 이메일을 포함하여 2)+3)을 출력후 스캔하여 pdf 파일로 저장.</li>
+                        <li>출력물은 참여자파일에 보관</li>
+                        <li>알선진행한 참여자의 [구직인증번호]를 클릭하여 뜬 팝업창에서 맨아래쪽까지 스크롤하여 <strong class="text-red-600">[집중상담관리]</strong> 클릭</li>
+                    </ul>
+                    <img src="image/image31.png" alt="집중상담관리 클릭 (image31.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+                    <ul class="list-disc list-outside pl-6 space-y-2 my-4">
+                        <li>-[컨설팅상담]-<strong class="text-blue-600">[기타 컨설팅]</strong> 선택 후 알선진행한 업체명 [목표기업]에 입력 [상담내용]에 내용 입력(성남지점의 경우 외부알선 상담일지와 동일한 내용 기입) 후 스캔한 1)+2)+3) 파일을 <strong class="text-red-600">[첨부파일]</strong>에 업로드</li>
+                    </ul>
+                    <img src="image/image32.png" alt="기타 컨설팅 업로드 (image32.png)" class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-sm my-4">
+
+                    <h4 class="text-lg font-semibold mt-6 mb-2">5-2-2. 외부구인정보소개(외부알선) 상담일지(예시, 유선)</h4>
+                    <div class="example-box">
+<strong class="text-blue-600">[외부알선]</strong>
+유선상담시간 1357~1402
+
+<strong>[외부알선]</strong>
+- <span class="text-blue-600">회 사 명 : ㈜ㅇㅇㅇㅇ</span>
+- <span class="text-blue-600">직 무 : ㅇㅇㅇㅇ</span>
+- <span class="text-blue-600">급 여 : 면접 후 결정</span>
+- <span class="text-blue-600">근무지 : 서울 ㅇㅇ구</span>
+- <span class="text-blue-600">정보제공처 : 사람인</span>
+- 채용담당자 : ㅇㅇㅇ / 000-0000-0000 / oooooo@oooooo.com
+- 참여자의 지원의사 확인하여 알선진행함
+- <strong class="text-blue-600">채용담당자 통화 후 이력서 메일발송함</strong>
+- 변동사항 및 문의사항 발생시 연락달라고 안내함
+                    </div>
+                </section>
+                
+                <!-- 6. 각종 예시 -->
+                <section id="chap6" class="content-section max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md mt-8">
+                    <h2 class="text-3xl font-bold mb-6 pb-3 border-b border-gray-200">6. 각종 예시</h2>
+                    <ul class="list-disc list-outside pl-6 space-y-2 mb-4">
+                        <li>유형별 최초 유선통화시 상담일지 작성예시</li>
+                        <li>훈련참여지원수당 상담일지 작성예시</li>
+                        <li>2회차 이상의 구직촉진수당 지정일 상담일지 예시</li>
+                        <li>1유형 참여자 구직촉진수당 사전제출예약 동의 후 저장 안내카톡 예시</li>
+                    </ul>
+
+                    <h3 id="chap6-1" class="text-2xl font-semibold mt-10 mb-4 pb-2 border-b">6-1. 최초 유선통화시 상담일지 작성예시(유형별, 활동별)</h3>
+                    
+                    <h4 class="text-lg font-semibold mt-6 mb-2">6-1-1. 1유형(사이버진로교육센터 온라인 교육)</h4>
+                    <div class="example-box">
+<strong class="text-blue-600">[구직활동 확인 및 상담 / 채용정보제공]</strong>
+유선상담시간 1018~1021
+
+<strong>[상담내용]</strong>
+- 해당참여자 취업활동계획대로 구직활동 이행중임을 확인함
+- <span class="text-blue-600">사이버진로교육센터 온라인교육 이수에 대한 방법 안내함</span>
+- 직무 수행을 위한 훈련과정 탐색하여 상담진행하여 <span class="text-blue-600">내일배움카드 발급 및 훈련과정 신청을 위해 방문하기로 함</span>
+- 구직촉진수당 지급요건 및 신청절차에 대해 안내함
+- 변동사항이나 문의사항 발생시 연락달라고 안내함
+
+<strong>[구직신청 내용에 적합한 채용정보제공]</strong>
+- <span class="text-blue-600">회 사 명 : ㅇㅇㅇㅇ㈜</span>
+- <span class="text-blue-600">직 무 : 경영 기획 사무원</span>
+- 급 여 : 면접 후 결정
+- 근무지 : 서울 ㅇㅇ구
+- 정보제공처 : ㅇㅇㅇ
+- 알선가능함을 안내함
+- 검토 후 지원의사 답변해주기로 함
+                    </div>
+
+                    <h4 class="text-lg font-semibold mt-6 mb-2">6-1-2 1유형(직업훈련 참여중)</h4>
+                    <div class="example-box">
+<strong class="text-blue-600">[구직활동 확인 및 상담 / 채용정보제공]</strong>
+유선상담시간 1132~1136
+
+<strong>[상담내용]</strong>
+- 참여자 취업활동계획에 따라 <span class="text-blue-600">훈련에 성실히 참여중임을 확인함</span>
+- 참여자의 구직촉진수당 지급 요건 및 신청방법과 절차에 대해 안내함
+- 성실한 훈련참여를 독려하고 변동사항 및 문의사항 발생시 연락달라고 안내함
+
+<strong>[구직신청 내용에 적합한 채용정보제공]</strong>
+- <span class="text-blue-600">회 사 명 : ㅇㅇㅇㅇ 주식회사</span>
+- <span class="text-blue-600">직 무 : ㅇㅇㅇㅇ</span>
+- <span class="text-blue-600">급 여 : 연봉 0,000만원</span>
+- 근무지 : 서울 ㅇㅇ구
+- 정보제공처 : ㅇㅇㅇ
+- 알선가능함을 안내함
+- 검토 후 지원의사 답변해주기로 함
+                    </div>
+                    <div class="mt-4 border-l-4 border-red-500 pl-4 py-2 bg-red-50 rounded-md">
+                        <p class="font-bold text-red-700">*주의사항</p>
+                        <p class="text-base text-red-700 leading-relaxed">
+                            훈련참여자의 경우 출결상황 확인가능하므로 주기적으로 출석잘하고 있는지 모니터링 진행 필수!
+                        </p>
+                    </div>
+
+                    <h4 class="text-lg font-semibold mt-6 mb-2">6-1-3. 2유형</h4>
+                    <div class="example-box">
+<strong class="text-blue-600">[취업지원 및 구직활동지원 프로그램 운영기간 안내/채용정보제공]</strong>
+유선상담시간 1206~1210
+
+<strong>[취업지원 및 구직활동지원 프로그램 운영기간 안내]</strong>
+- 국민취업지원제도 취업지원 및 구직활동 프로그램 운영기간에 대해 안내함
+- <span class="text-blue-600">훈련참여시 유의사항에 대해 안내하고 훈련참여지원수당 지급요건을 설명함</span>
+
+<strong>[구직신청 내용에 적합한 채용정보제공]</strong>
+- <span class="text-blue-600">회 사 명 : ㅇㅇ법인ㅇㅇㅇ</span>
+- <span class="text-blue-600">직 무 : ㅇㅇ 사무원</span>
+- 급 여 : 면접 후 결정
+- 근무지 : 서울 ㅇㅇ구
+- 정보제공처 : ㅇㅇㅇ
+- 알선가능함을 안내함
+- 검토 후 지원의사 답변해주기로 함
+                    </div>
+
+                    <h3 id="chap6-2" class="text-2xl font-semibold mt-10 mb-4 pb-2 border-b">6-2. 훈련참여지원수당 상담일지 작성 예시</h3>
+                    
+                    <h4 class="text-lg font-semibold mt-6 mb-2">6-2-1. 내일배움카드 훈련과정 참여시</h4>
+                    <div class="example-box">
+<strong class="text-blue-600">[1회차 훈련참여지원수당 신청 / 채용정보제공]</strong>
+유선상담시간 1321~1324
+
+<strong>[훈련참여지원수당 1회차 신청]</strong>
+- 미근로
+- <span class="text-blue-600">직업훈련 :</span>
+  1. 훈련기관: ㅇㅇㅇㅇ교육원
+  2. 훈련과정: oooooo 취업과정
+  3. <span class="text-blue-600">단위기간: 2001-10-08~2001-11-07(훈련일수 20일, 결석1일, 조퇴1일 지각2일, 질병승인2일)</span>
+- 훈련 80%이상 출석하였으며, 훈련참여지원수당 신청서 제출 함
+- <strong class="text-red-600">훈련장려금 외 별도의 수당 받은 사실이 없음을 확인함</strong>
+- 수당 지급 처리기한을 안내함
+
+<strong>[구직신청 내용에 적합한 채용정보제공]</strong>
+- <span class="text-blue-600">회 사 명 : ㈜ㅇㅇㅇㅇ</span>
+- <span class="text-blue-600">직 무 : ㅇㅇㅇ</span>
+- 급 여 : 면접 후 결정
+- 근무지 : 서울 ㅇㅇ구
+- 정보제공처 : ㅇㅇㅇ
+- 알선가능함을 안내함
+- 검토 후 지원의사 답변해주기로 함
+                    </div>
+
+                    <h4 class="text-lg font-semibold mt-6 mb-2">6-2-2. 미인정과정 참여시</h4>
+                    <div class="example-box">
+<strong class="text-blue-600">[1회차 훈련참여지원수당 신청 / 채용정보제공]</strong>
+유선상담시간 1114~1117
+
+<strong>[훈련참여지원수당 1회차 신청]</strong>
+- 미근로
+- <span class="text-blue-600">직업훈련 :</span>
+  1. 훈련기관: ㅇㅇㅇㅇㅇㅇ학원
+  2. 훈련과정: ㅇㅇㅇㅇ
+  3. <span class="text-blue-600">훈련기간: 2005-02-28~2005-03-27 (훈련일수20일, 질병승인3일)</span>
+- <strong class="text-blue-600">참여자 미인정과정 훈련참여중으로 출석부 전달받아 출석확인함</strong>
+- 훈련 80%이상 출석하였으며, 훈련참여지원수당 신청서 제출 함
+- <strong class="text-red-600">별도의 수당 받은 사실이 없음을 확인함</strong>
+- 수당 지급 처리기한을 안내함
+
+<strong>[구직신청 내용에 적합한 채용정보제공]</strong>
+- <span class="text-blue-600">회 사 명 : ㅇㅇㅇㅇ(주)</span>
+- <span class="text-blue-600">직 무 : ㅇㅇㅇㅇㅇㅇ</span>
+- 급 여 : 회사내규에 따름 / 면접 후 결정
+- 근무지 : 서울 ㅇㅇ구
+- 정보제공처 : ㅇㅇㅇ
+- 알선가능함을 안내함
+- 검토 후 지원의사 답변해주기로 함
+                    </div>
+
+                    <h3 id="chap6-3" class="text-2xl font-semibold mt-10 mb-4 pb-2 border-b">6-3. 구직촉진수당 지정일 상담일지 예시(2회차 이후)</h3>
+                    
+                    <h4 class="text-lg font-semibold mt-6 mb-2">6-3-1. 구직촉진수당 지정일 상담일지(온라인교육)</h4>
+                    <div class="example-box">
+<strong class="text-blue-600">[2회차 취업활동이행보고 및 검토승인 / 인터넷 신청 승인 / 채용정보제공]</strong>
+유선상담시간 0000~0000
+
+<strong>[2회차 취업활동이행보고 및 검토승인]</strong>
+-지원대상기간 : 2004.03.10~2004.04.09
+-지원대상기간 취업활동 보고서 제출하였고 검토함
+<strong>* 취업지원 프로그램 활동</strong>
+  - <span class="text-blue-600">사이버진로교육센터 온라인교육 2회 수료함</span>
+  - <span class="text-blue-600">2004.03.11 시선을 사로잡는 서류전형 수료</span>
+  - <span class="text-blue-600">2004.03.11 마음을 사로잡는 서류전형 수료</span>
+- 구직활동 2회에 해당됨을 설명함
+
+<strong>[구직촉진수당 인터넷 신청 승인]</strong>
+- <strong class="text-red-600">소득발생 및 취업예정 없음을 확인함</strong>
+- 가족수당 지급대상 가구원 없음을 확인함
+- 처리기한 안내함
+- 3회차 지정일 및 수당지급요건 확인 안내함
+- 문의사항이나 변동사항이 있으면 연락달라고 안내함
+
+<strong>[구직신청 내용에 적합한 채용정보제공]</strong>
+- <span class="text-blue-600">회 사 명 : ㅇㅇㅇㅇㅇㅇ(주)</span>
+- <span class="text-blue-600">직 무 : ㅇㅇㅇㅇ 기술자</span>
+- 급 여 : 면접 후 결정
+- 근무지 : 서울 ㅇㅇ구
+- 정보제공처 : ㅇㅇㅇ
+- 알선가능함을 안내함
+- 검토 후 지원의사 답변해주기로 함
+                    </div>
+
+                    <h4 class="text-lg font-semibold mt-6 mb-2">6-3-2. 구직촉진수당 지정일 상담일지(훈련참여)</h4>
+                    <div class="example-box">
+<strong class="text-blue-600">[2회차 취업활동이행보고 및 검토승인 / 인터넷 신청 승인 / 채용정보제공]</strong>
+유선상담시간 0000~0000
+
+<strong>[2회차 취업활동이행보고 및 검토승인]</strong>
+-지원대상기간 : 2004.03.10~2004.04.09
+-지원대상기간 취업활동 보고서 제출하였고 검토함
+<strong>* 취업지원 프로그램 활동</strong>
+  - <span class="text-blue-600">직업훈련</span>
+  1. 훈련과정명 : ㅇㅇㅇ 취업 과정
+  2. 훈련기관명 : ㅇㅇㅇㅇㅇㅇ학원
+- <strong class="text-blue-600">지원대상기간 내 수업일수 10일이상. 출석율 80%이상 이행 확인함</strong>
+- 구직활동 2회에 해당됨을 설명함
+- <strong class="text-blue-600">출석부 당일 수업끝나고 학원에 요청하여 전달해주기로 함</strong>
+
+<strong>[구직촉진수당 인터넷 신청 승인]</strong>
+- <strong class="text-red-600">소득발생 내역 확인함</strong>
+  <span class="text-red-600">* 316,000 / 취업지원프로그램_훈련장려금 / 2004.03.25</span>
+- 취업예정없음을 확인함
+- 가족수당 신청 대상 가구원 없음을 확인함
+- 처리기한 안내함
+- 다음회차 구직촉진수당 지급요건 안내함
+- 문의사항이나 변동사항 발생시 연락달라고 안내함
+
+<strong>[구직신청 내용에 적합한 채용정보제공]</strong>
+- <span class="text-blue-600">회 사 명 : ㈜ㅇㅇㅇㅇㅇ</span>
+- <span class="text-blue-600">직 무 : ㅇㅇㅇㅇ</span>
+- <span class="text-blue-600">급 여 : 연봉 0,000만원</span>
+- 근무지 : 서울 ㅇㅇ구
+- 정보제공처 : ㅇㅇㅇ
+- 알선가능함을 안내함
+- 검토 후 지원의사 답변해주기로 함
+                    </div>
+
+                    <h4 class="text-lg font-semibold mt-6 mb-2">6-3-3. 구직촉진수당 지정일 상담일지(입사지원2건)</h4>
+                    <div class="example-box">
+<strong class="text-blue-600">[2회차 취업활동이행보고 및 검토승인 / 인터넷 신청 승인 / 채용정보제공]</strong>
+유선상담시간 0000~0000
+
+<strong>[2회차 취업활동이행보고 및 검토승인]</strong>
+-지원대상기간 : 2004.03.10~2004.04.09
+-지원대상기간 취업활동 보고서 제출하였고 검토함
+<strong>*구직활동지원 프로그램 활동</strong>
+  * <span class="text-blue-600">입사지원서 제출 : 04.07 ㅇㅇㅇㅇ해장국, ㈜ㅇㅇㅇㅇ</span>
+- 구직활동 2회에 해당됨을 설명함
+
+<strong>[구직촉진수당 인터넷 신청 승인]</strong>
+- <strong class="text-red-600">소득발생 내역 확인함(총금액 : 000,000원)</strong>
+  <span class="text-red-600">* 000,000원 / 근로소득_일일 아르바이트 급여 정산_ㅇㅇㅇㅇ / 2004.03.22</span>
+  <span class="text-red-600">* 000,000원 / 근로소득_일일 아르바이트 급여 정산_ㅇㅇㅇㅇ / 2004.03.29</span>
+  <span class="text-red-600">* 000,000원 / 근로소득_일일 아르바이트 급여 정산_ㅇㅇㅇㅇ / 2004.04.01</span>
+- 취업예정 없음을 확인함
+- <strong class="text-blue-600">가족수당 지급대상 가구원 2명을 확인함</strong>
+- 처리기한 안내함
+- 다음회차 지정일 및 수당지급요건 확인 안내함
+- 문의사항이나 변동사항이 있으면 연락달라고 안내함
+
+<strong>[가족수당 신청 대상 가구원]</strong>
+- <strong class="text-blue-600">가족수당 신청 대상 가구원 2명(만 18세 이하 2명) 확인함</strong>
+- 주민등록 등본상 변동 가구원 없음을 확인함
+- 국민취업지원제도 참여중이 아님을 확인함
+
+<strong>[구직신청 내용에 적합한 채용정보제공]</strong>
+- <span class="text-blue-600">회 사 명 : ㈜ㅇㅇㅇㅇㅇ</span>
+- <span class="text-blue-600">직 무 : ㅇㅇㅇㅇ</span>
+- <span class="text-blue-600">급 여 : 연봉 0,000만원</span>
+- 근무지 : 서울 ㅇㅇ구
+- 정보제공처 : ㅇㅇㅇ
+- 알선가능함을 안내함
+- 검토 후 지원의사 답변해주기로 함
+                    </div>
+
+                    <h3 id="chap6-4" class="text-2xl font-semibold mt-10 mb-4 pb-2 border-b">6-4. 1유형 참여자 구직촉진수당 사전제출예약 동의 후 저장 안내카톡 예시</h3>
+
+                    <h4 class="text-lg font-semibold mt-6 mb-2">6-4-1. 구직촉진수당 신청 카톡 안내 (온라인 교육)</h4>
+                    <div class="example-box">
+안녕하세요 김ㅇㅇ님
+<strong class="text-blue-600">★사이버진로교육센터 온라인교육 수강 및 구직촉진수당 신청 안내 드립니다</strong>
+
+<span class="text-red-600">✨절대로✨✨<strong>★03.10~04.09☆</strong>✨✨ 꼭 이 기간안에 들으셔야 합니다.✨</span>
+<span class="text-red-600">✨오늘 들으시면 안됩니다✨</span>
+
+https://www.work.go.kr/cyberedu/main.do
+상기 링크로 접속하신 후
+<strong>1. 마음을 사로잡는 면접전형 준비
+2. 시선을 사로잡는 서류전형 준비</strong>
+위 두가지 과정 들으시고 수료과정 가셔서 수료증을
+인쇄-PDF로 저장 하시어 파일업로드 해주시면 됩니다.
+
+<strong class="text-blue-600">★구직촉진수당 사전 제출 및 증빙자료 업로드</strong>
+https://www.work24.go.kr/ua/z/z/1300/selectEmssRqutIntro.do
+사이트 로그인 후 [취업지원]-[국민취업지원제도]-[Ⅰ유형 구촉수당신청]-[2회차] 제출
+<strong class="text-blue-600">온라인교육2개 선택 후 증빙자료 업로드</strong>
+
+★구직촉진수당은 사전에 제출예약 해놓는게 가능하므로 해당과정 두개 이수하시고 바로 2회차 신청 들어가셔서 <strong class="text-red-600">사전제출예약 동의에 '예' 체크</strong>하시고 <strong class="text-red-600">[저장]</strong>해두시면 지정일에 자동 제출됩니다.
+                    </div>
+
+                    <h4 class="text-lg font-semibold mt-6 mb-2">6-4-2. 구직촉진수당 신청 카톡 안내 (훈련참여)</h4>
+                    <div class="example-box">
+안녕하세요 김ㅇㅇ님의 구직촉진수당 2회차에 앞서 구직촉진수당 사전신청/저장 방법 안내드립니다.
+
+<strong class="text-blue-600">★구직촉진수당 사전 제출 및 증빙자료 업로드</strong>
+https://www.work24.go.kr/ua/z/z/1300/selectEmssRqutIntro.do
+사이트 로그인 후 취업지원-국민취업지원제도-Ⅰ유형 구촉수당신청-
+2회차 선택 후 아래 제출버튼 누르고 들어가셔서
+<strong class="text-blue-600">직업훈련 참여 - 이행등록 선택 – 아래에 활성화된 보고내용에 훈련참여기간
+2004.03.10~2004.04.09로 설정</strong>
+-&gt; 구직촉진수당 신청만 미리해주시면 출석부는 나중에 업로드 하실 수 있습니다.
+
+★구직촉진수당은 사전에 제출예약 해놓는게 가능하므로 <strong class="text-red-600">사전제출예약 동의에 '예' 체크</strong>하시고 <strong class="text-red-600">[저장]</strong>해두시면 지정일에 자동 제출됩니다.
+
+<strong class="text-blue-600">★되도록 미리 신청하시고 신청해놓으시면 제가 내용 확인이 가능하므로 확인요청해주시면 잘못된 부분 없는지 제가 체크해드리겠습니다</strong>
+                    </div>
+
+                    <h4 class="text-lg font-semibold mt-6 mb-2">6-4-3. 구직촉진수당 신청 카톡 안내 (입사지원2건)</h4>
+                    <div class="example-box">
+안녕하세요 김ㅇㅇ님의 구직촉진수당 3회차 구직촉진수당 사전신청/저장 방법 안내드립니다.
+
+<strong class="text-blue-600">★구직촉진수당 사전 제출 및 증빙자료 업로드</strong>
+https://www.work24.go.kr/ua/z/z/1300/selectEmssRqutIntro.do
+사이트 로그인 후 취업지원-국민취업지원제도-Ⅰ유형 구촉수당신청--3회차 제출
+<strong class="text-blue-600">입사지원서 제출 2회 ✔ 하고 두번 클릭</strong>
+증빙자료 업로드
+
+<strong class="text-blue-600">◈◉◈구직촉진수당(입사지원 2회)증빙서류 제출◈◉◈</strong>
+<span class="text-red-600">-필요서류: 1)입사지원내역(취업활동증명서)
+          2)지원한 해당 업체의 채용공고(2개)</span>
+
+<strong>1. 고용24에서 지원했을 경우</strong>
+고용24 간편인증 로그인 후 마이페이지&gt;&gt;입사지원내역&gt;&gt;선택저장/인쇄 클릭 후 PDF로 저장하여 업로드
+채용공고는 인쇄하기&gt;&gt;PDF로 저장하여 업로드
+
+<strong>2. 잡코리아 인크루트 사람인 등 외부구인사이트</strong>
+로그인 후 마이페이지&gt;&gt;취업활동내역 증명&gt;&gt;인쇄하기&gt;&gt;&gt;PDF로 저장후 업로드
+채용공고 동일하게 인쇄하기 후 PDF로 저장하여 업로드
+
+<strong class="text-blue-600">◈◉◈입사지원 증빙 올리실때 주의하실 점 알려드립니다.◈◉◈</strong>
+<strong>1. 지원직무=희망직무</strong>
+김ㅇㅇ님의 경우 지망하시는 직무분야가 <span class="text-blue-600">웹 개발자/모바일 애플리케이션 프로그래머</span>로 되어 있으므로 이 중에서 지원하셔야 합니다.
+고용24의 경우 직무분류가 상기 직무 중 하나로 분류되었는지 확인하시면 됩니다.
+잡코리아 사람인 인크루트를 포함한 사이트의 경우 제목 혹은 상세내용에 표기되어 있는지 확인하시면 됩니다.
+
+<strong>2. 희망지역</strong>
+<span class="text-blue-600">경기/서울</span>로 설정되어 있으시므로 근무지역 혹은 근무예정지가 경기 혹은 서울권인 곳으로 지원하시면 됩니다
+
+<strong>3. 신입/경력</strong>
+<span class="text-blue-600">신입 혹은 경력무관</span>으로 되어 있는 건으로 지원하셔야 합니다.
+
+<strong>4. 학력사항</strong>
+<span class="text-blue-600">4년대 대학 졸업</span>이시므로 <span class="text-blue-600">고졸/대졸(2,3년제)/대졸(4년제)/학력무관</span> 으로 되어 있는 곳에 지원하셔야 합니다.
+                    </div>
+                </section>
+            </div> <!-- End of content-wrapper -->
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mainContent = document.getElementById('main-content');
+            const sidebarNav = document.getElementById('sidebar-nav');
+            const navLinks = sidebarNav.querySelectorAll('.sidebar-link');
+            const contentWrapper = document.getElementById('content-wrapper');
+            const sections = contentWrapper.querySelectorAll('.content-section');
+            const searchInput = document.getElementById('search-input');
+
+            // --- 원본 콘텐츠 저장을 위한 Map ---
+            const originalContentMap = new Map();
+            sections.forEach((section, index) => {
+                originalContentMap.set(section.id || `section-${index}`, section.innerHTML);
+            });
+
+            // --- 헬퍼 함수: 텍스트 하이라이트 ---
+            function highlightText(node, searchTerm) {
+                if (node.nodeType === Node.TEXT_NODE) {
+                    const text = node.nodeValue;
+                    const regex = new RegExp(`(${escapeRegExp(searchTerm)})`, 'gi');
+                    
+                    if (regex.test(text)) {
+                        const fragment = document.createDocumentFragment();
+                        text.split(regex).forEach(part => {
+                            if (part.toLowerCase() === searchTerm.toLowerCase()) {
+                                const mark = document.createElement('mark');
+                                mark.className = 'search-highlight'; // Tailwind 클래스 대신 CSS 클래스 사용
+                                mark.textContent = part;
+                                fragment.appendChild(mark);
+                            } else {
+                                fragment.appendChild(document.createTextNode(part));
+                            }
+                        });
+                        return fragment;
+                    }
+                } else if (node.nodeType === Node.ELEMENT_NODE && node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') {
+                    // 자식 노드를 순회하며 재귀적으로 호출
+                    // 배열로 변환하여 순회 (자식 노드 교체 시 NodeList가 변경될 수 있으므로)
+                    Array.from(node.childNodes).forEach(child => {
+                        const highlighted = highlightText(child, searchTerm);
+                        if (highlighted) {
+                            node.replaceChild(highlighted, child);
+                        }
+                    });
+                }
+                return null;
+            }
+            
+            // --- 헬퍼 함수: 원본 콘텐츠 복원 ---
+            function restoreOriginalContent() {
+                sections.forEach((section, index) => {
+                    const id = section.id || `section-${index}`;
+                    if (originalContentMap.has(id)) {
+                        section.innerHTML = originalContentMap.get(id);
+                    }
+                });
+            }
+
+            // --- 헬퍼 함수: 정규식 특수문자 이스케이프 ---
+            function escapeRegExp(string) {
+                return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $&는 일치하는 전체 문자열을 의미
+            }
+            
+            // --- 검색 기능 스크립트 (하이라이트 방식) ---
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.trim();
+
+                // 1. 모든 하이라이트 제거 및 원본 복원
+                restoreOriginalContent();
+
+                if (searchTerm) {
+                    // 2. 검색어가 있으면 하이라이트 적용
+                    sections.forEach(section => {
+                        highlightText(section, searchTerm);
+                    });
+                }
+                // 검색어가 없으면 원본 상태로 유지 (restore에서 이미 처리됨)
+            });
+
+            // --- 사이드바 스크롤 스파이 (IntersectionObserver) ---
+            const observerOptions = {
+                root: mainContent, // 스크롤 이벤트를 감지할 대상
+                rootMargin: '0px 0px -60% 0px', // 뷰포트 상단에서 40% 지점에 섹션이 오면 활성화
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        const activeLink = sidebarNav.querySelector(`a[href="#${id}"]`);
+                        
+                        // 모든 링크에서 'active' 클래스 제거
+                        navLinks.forEach(link => link.classList.remove('active'));
+                        
+                        // 현재 보이는 섹션의 링크에 'active' 클래스 추가
+                        if (activeLink) {
+                            activeLink.classList.add('active');
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // 모든 섹션 관찰 시작
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+            
+            // 초기 로드 시 첫 번째 링크 활성화
+            if(navLinks.length > 0) {
+                navLinks[0].classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
